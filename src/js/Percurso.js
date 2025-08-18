@@ -31,7 +31,7 @@ class Percurso
         this.valorPedagios = parseFloat(valorPedagios);
 
         this.restaurantes = parseInt(restaurantes);
-        this.custoMedioRefeicao = parseFloat(tempoEstimado);
+        this.custoMedioRefeicao = parseFloat(custoMedioRefeicao);
 
         this.tempoEstimado = parseFloat(tempoEstimado);
 
