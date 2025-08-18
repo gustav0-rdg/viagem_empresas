@@ -1,0 +1,29 @@
+:root{
+    --preto: #000000;
+    --branco: #ffffff;
+    --vermelho: #ff0505;
+    --laranja: #ff8c00;
+    --amarelo: #ffdd00;
+    --verde: #3fdf42;
+    --azul: #0077ff; 
+    --roxo: #9000ff;
+    --rosa: #ff00bb;
+}
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+/* Responsividade - Celular */
+@media screen and (max-width: 480px){
+
+}
+
+/* Responsividade - Tablet */
+@media screen and (max-width: 768px){
+
+}
