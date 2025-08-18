@@ -34,7 +34,7 @@ class Carro
 
     }
 
-    tempoEstimado (distanciaKm)
+    horasEstimadas (distanciaKm)
     {
 
         distanciaKm = parseFloat(distanciaKm)
