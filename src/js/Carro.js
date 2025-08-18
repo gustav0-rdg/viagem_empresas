@@ -9,8 +9,8 @@ class Carro
 
         if (
 
-            isNaN(consumoPorKm) ||
-            isNaN(velocidadeMedia)
+            isNaN(this.consumoPorKm) ||
+            isNaN(this.velocidadeMedia)
 
         )
 
