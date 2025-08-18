@@ -1,21 +1,71 @@
 class Percurso
 {
 
-    constructor (distanciaKm)
+    constructor ({
+
+        origem,
+        destino,
+
+        distancia,
+
+        pedagios,
+        valorPedagios,
+
+        restaurantes,
+        custoMedioRefeicao,
+
+        tempoEstimado,
+
+        pontosTuristicos
+
+    })
+
     {
 
-        this.distanciaKm = parseFloat(distanciaKm);
+        this.origem = origem;
+        this.destino = destino;
 
-        if (
+        this.distanciaKm = parseFloat(distancia);
 
-            isNaN(this.distanciaKm)
+        this.pedagios = parseInt(pedagios);
+        this.valorPedagios = parseFloat(valorPedagios);
+
+        this.restaurantes = parseInt(restaurantes);
+        this.custoMedioRefeicao = parseFloat(tempoEstimado);
+
+        this.tempoEstimado = parseFloat(tempoEstimado);
+
+        this.pontosTuristicos = pontosTuristicos;
+
+        if
+        (
+
+            this.origem?.length <= 0 ||
+            this.destino?.length <= 0 ||
+
+            isNaN(this.distanciaKm) ||
+
+            isNaN(this.pedagios) ||
+            isNaN(this.valorPedagios) ||
+
+            isNaN(this.restaurantes) ||
+            isNaN(this.custoMedioRefeicao) ||
+
+            isNaN(this.tempoEstimado) ||
+
+            !Array.isArray(this.pontosTuristicos)
 
         )
 
         {
-            throw new Error ('O parâmetro "distanciaKm" deve ser INT/FLOAT.');
+            throw new Error ('ERRO');
         }
 
+    }
+
+    valorTotalPedagios ()
+    {
+        return this.valorPedagios * this.pedagios;
     }
 
 }
