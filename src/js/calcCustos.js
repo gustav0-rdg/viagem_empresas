@@ -1,4 +1,4 @@
-class CalculadoraCustosViagem {
+export default class CalculadoraCustosViagem {
     constructor() {
         this.litrosNecessarios = 0;
         this.custoCombustivel = 0;
