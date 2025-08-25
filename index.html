@@ -29,14 +29,14 @@
 
             <!-- Selects -->
             <label for="partida">Origem:</label>
-            <select name="origem" id="viagem-origem" class="rotas__origem">
+            <select name="origem" id="rotas__origem" class="rotas__origem">
                 <option value="">
                     Selecione
                 </option>
             </select>
 
             <label for="destino">Destino:</label>
-            <select name="destino" class="rotas__destino">
+            <select name="destino" id="rotas__destino" class="rotas__destino">
                 <option value="">
                     Selecione
                 </option>
@@ -44,7 +44,14 @@
 
             <!-- Infos da rota -->
             <div class="rotas__info">
-
+                <ul>
+                    <li>Distância: <span class="rotas__value"> </span> km</li>
+                    <li>Pedágios: <span class="rotas__value"> </span> praças</li>
+                    <li>Valor total pedágios: R$<span class="rotas__value"> </span></li>
+                    <li>Restaurantes no trajeto: <span class="rotas__value"> </span></li>
+                    <li>Tempo estimado: <span class="rotas__value"> </span></li>
+                    <li>Pontos turísticos: <span class="rotas__value"> </span></li>
+                </ul>
             </div>
 
             <!-- Dados do veículo -->
