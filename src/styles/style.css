@@ -67,15 +67,72 @@ p {
 }
 
 h2 {
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    color: var(--rosa);
 }
 
 hr{
     height: 2px;
     width: 100%;
+    background-color: var(--amarelo);
     background-color: var(--laranja );
     border: none;
     margin-top: 0;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: var(--roxo);
+}
+
+select {
+    height: 30px;
+    border-color: var(--laranja);
+    color: var(--azul);
+    font-weight: 500;
+    outline-color: var(--verde);
+    border-radius: 4px;
+}
+
+.rotas__info {
+ width: 80%;
+ font-size: 16px;
+ background-color: var(--cinza);
+}
+
+input {
+    height: 30px;
+    border-color: var(--verde);
+    color: var(--azul);
+    font-weight: 500;
+    outline-color: var(--laranja);
+    border-radius: 4px;
+}
+
+.form__calcular {
+    margin-top: 20px;
+    width: 30%;
+    height: 30px;
+    background-color: var(--azul);
+    border: none;
+    border-radius: 4px;
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form__limpar {
+    margin-top: 10px;
+    width: 30%;
+    height: 30px;
+    background-color: var(--rosa);
+    border: none;
+    border-radius: 4px;
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 16px;
 }
 
 
