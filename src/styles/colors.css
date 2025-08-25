@@ -1,0 +1,16 @@
+html[data-theme='lgbt']
+{
+    --page-bg: #F6F7FA;
+
+    --header-bg: #3E95D8;
+    --text-header: #FFF;
+
+    --infos-bg: #F8F9FB;
+
+    --constrast-color: linear-gradient(red, orange, yellow, green, blue, purple);
+
+    
+
+    --default-text: #000;
+    --subtext: #D9D9D9;
+}
