@@ -1,3 +1,5 @@
+// Criado por Zenon
+
 export default class CalculadoraCustosViagem {
     constructor() {
         this.litrosNecessarios = 0;

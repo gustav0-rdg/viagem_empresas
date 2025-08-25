@@ -1,8 +1,21 @@
+// Criado por gustavo
+
+
 import CalculadoraCustosViagem from "../calcCustos.js";
 import { routes } from '../routesData.js';
-
+import inserirNaTela from '../modules/insertingValues.js'
 const form = document.querySelector('.form__container');
 const calculadora = new CalculadoraCustosViagem();
+
+// Objeto externo que será preenchido no submit
+export const resultadoViagem = {
+    litrosNecessarios: 0,
+    custoCombustivel: 0,
+    tempo: '',
+    pedagios: 0,
+    precoRestaurantes: 0,
+    valorTotal: 0
+};
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -10,48 +23,50 @@ form.addEventListener('submit', (e) => {
     const formData = new FormData(form);
     const data = {};
 
-    // Converte FormData para objeto
     formData.forEach((value, key) => {
         data[key] = value;
     });
-
-    // Converte strings para números onde necessário
+    console.log(data);
     data.consumo = parseFloat(data.consumo);
     data.precoGas = parseFloat(data.precoGas);
+    
+    if (isNaN(data.consumo) || isNaN(data.precoGas)) {
+        console.error("Dados inválidos para consumo ou preço do combustível.");
+        return;
+    }
 
-    // Encontra a rota correta
-    const rotaSelecionada = routes.find(rota => 
+    const rotaSelecionada = routes.find(rota =>
         rota.origem === data.origem && rota.destino === data.destino
     );
 
     if (!rotaSelecionada) {
         console.error("Rota não encontrada!");
         return;
-    };
+    }
 
-    // Calcula combustível
     const litrosNecessarios = rotaSelecionada.distancia / data.consumo;
-    const custoCombustivel = calculadora.calcularCombustivel(litrosNecessarios, data.precoGas);
+    const custoCombustivel = calculadora.calcularCombustivel(rotaSelecionada.distancia, data.consumo, data.precoGas);
 
-    // Define custos adicionais (pedágios e alimentação)
-    calculadora.definirCustosAdicionais(rotaSelecionada.valorPedagios, rotaSelecionada.custoMedioRefeicao);
+    // Verifica se o tempo estimado e a velocidade média são válidos
+    if (isNaN(rotaSelecionada.tempoEstimado) || rotaSelecionada.tempoEstimado <= 0) {
+        console.error("Tempo estimado da rota inválido.");
+        return;
+    }
+    const tempo = calculadora.formatarTempo(rotaSelecionada.distancia, data['velocidade-media']);
 
-    // Calcula o custo total da viagem
+    // Verifica valores de pedagios e alimentação
+    const pedagios = rotaSelecionada.valorPedagios || 0;
+    const precoRestaurantes = rotaSelecionada.custoMedioRefeicao || 0;
+
     const valorTotal = calculadora.calcularCustoTotal();
 
-    returnValues(litrosNecessarios.toFixed(2), custoCombustivel.toFixed(2), calculadora.formatarTempo(rotaSelecionada.tempoEstimado),rotaSelecionada.valorPedagios,rotaSelecionada.custoMedioRefeicao,valorTotal.toFixed(2))
+    // Preenche o objeto exportado
+    resultadoViagem.litrosNecessarios = litrosNecessarios.toFixed(2);
+    resultadoViagem.custoCombustivel = custoCombustivel.toFixed(2);
+    resultadoViagem.tempo = tempo;
+    resultadoViagem.pedagios = pedagios;
+    resultadoViagem.precoRestaurantes = precoRestaurantes;
+    resultadoViagem.valorTotal = (custoCombustivel + pedagios + precoRestaurantes).toFixed(2);
 
+    inserirNaTela(resultadoViagem);
 });
-
-export default function returnValues(litrosNecessarios,custoCombustivel, tempo, pedagios, precoRestaurantes, valorTotal){
-    const valores = {
-        litrosNecessarios: litrosNecessarios,
-        custoCombustivel: custoCombustivel,
-        tempo: tempo,
-        pedagios: pedagios,
-        precoRestaurantes: precoRestaurantes,
-        valorTotal: valorTotal
-    };
-    console.log(valores);
-    return valores
-}
