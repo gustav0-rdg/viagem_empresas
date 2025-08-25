@@ -1,5 +1,5 @@
-import changeTheme from "./modules/changeTheme";
-import storageTheme from "./modules/storageTheme";
+import { changeTheme } from './modules/changeTheme.js';
+import { storageTheme } from './modules/storageTheme.js';
 
 const themesList = document.querySelector('.header__themes-list');
 

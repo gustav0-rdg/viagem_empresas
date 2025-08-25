@@ -1,6 +1,6 @@
 import { storageTheme } from './storageTheme.js';
 
-export default function changeTheme (defaultTheme = 'light')
+export function changeTheme (defaultTheme = 'light')
 {
     const theme = localStorage.getItem('theme');
 

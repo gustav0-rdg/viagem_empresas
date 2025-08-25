@@ -1,4 +1,4 @@
-export default function storageTheme (theme)
+export function storageTheme (theme)
 {
     if (!['lgbt', 'dark', 'light'].includes(theme))
     {
