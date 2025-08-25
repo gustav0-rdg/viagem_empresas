@@ -1,22 +1,8 @@
-/* Root de cores */
-:root{
-    --preto: #000000;
-    --branco: #ffffff;
-    --cinza: #e4e4e4;
-    --vermelho: #ff0505;
-    --laranja: #ff8c00;
-    --amarelo: #ffdd00;
-    --verde: #3fdf42;
-    --azul: #0077ff; 
-    --azul-claro: #a8d1ff44;
-    --roxo: #9000ff;
-    --rosa: #ff00bb;
-}
-
+@import url(colors.css);
 
 /* Estilização geral (global) */
 *{
-    margin: 0 px;
+    margin: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
@@ -27,7 +13,8 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
-    background-color: var(--cinza);
+    background: var(--page-bg);
+    background-image: var(--glitter);
 }
 
 
@@ -37,19 +24,55 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--vermelho);
+    background: var(--header-bg);
     width: 50%;
     border-radius: 8px;
+    color: var(--text-header);
+}
+
+.header__themes-list
+{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 2px solid var(--text-header);
+}
+
+.header__themes-list button
+{
+    padding: 5px 45px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.light-theme-btn
+{
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-theme-btn
+{
+    background-color: #000;
+    color: #fff;
+}
+
+.lgbt-theme-btn
+{
+    background: linear-gradient(#FF3B30, #FF9500, #FFCC00, #34C759, #007AFF, #AF52DE);
+    color: #000;
 }
 
 h1 {
     font-weight: 600;
-    color: var(--branco);
 }
 
 p {
     font-size: 16px;
-    color: var(--branco);
 }
 
 
@@ -59,7 +82,7 @@ p {
     height: 100%;
     margin-top: 20px;
     border-radius: 8px;
-    background-color: var(--branco);
+    background-color: var(--content-bg);
 }
 
 .form__container {
@@ -69,32 +92,43 @@ p {
 }
 
 h2 {
+    margin-top: 15px;
     margin-bottom: 5px;
-    color: var(--rosa);
+    background: var(--contrast-color);
+    color: var(--title-color);
 }
 
 hr{
-    height: 2px;
+    height: 5px;
     width: 100%;
-    background-color: var(--amarelo);
-    background-color: var(--laranja );
+    background: var(--contrast-color);
+    background-size: 300% 300%;
+    animation: alternate infinite 5s wave;
     border: none;
     margin-top: 0;
+}
+
+@keyframes wave 
+{
+    0% {
+        background-position: 0;
+    }
+
+    0% {
+        background-position: 100%;
+    }
 }
 
 label {
     margin-top: 10px;
     margin-bottom: 3px;
     font-weight: 600;
-    color: var(--roxo);
+    color: var(--default-text);
 }
 
 select {
     height: 30px;
-    border-color: var(--laranja);
-    color: var(--azul);
     font-weight: 500;
-    outline-color: var(--verde);
     border-radius: 4px;
 }
 
@@ -106,35 +140,43 @@ select {
 
 input {
     height: 30px;
-    border-color: var(--verde);
-    color: var(--azul);
     font-weight: 500;
-    outline-color: var(--laranja);
-    border-radius: 4px;
+}
+
+.form__buttons-group
+{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .form__calcular {
-    margin-top: 20px;
+    flex: 1;
     width: 30%;
     height: 30px;
-    background-color: var(--azul);
+    background: var(--calcular-btn-bg);
     border: none;
     border-radius: 4px;
-    color: var(--branco);
+    color: var(--text-calcular-btn);
     font-weight: 600;
     font-size: 16px;
+    box-shadow: var(--calcular-btn-glow);
+    cursor: pointer;
 }
 
 .form__limpar {
-    margin-top: 10px;
+    flex: 1;
     width: 30%;
     height: 30px;
-    background-color: var(--rosa);
+    background: var(--limpar-btn-bg);
     border: none;
     border-radius: 4px;
-    color: var(--branco);
+    color: var(--text-limpar-btn);
     font-weight: 600;
     font-size: 16px;
+    box-shadow: var(--limpar-btn-glow);
+    cursor: pointer;
 }
 
 .resultados__container {
@@ -163,6 +205,7 @@ span {
 
 .footer__container {
     margin-top: 20px;
+    color: var(--subtext);
 }
 
 

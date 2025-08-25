@@ -17,9 +17,9 @@
         <p>Calcule todos os custos e detalhes da sua próxima viagem</p>
 
         <nav class="header__themes-list">
-            <button data-theme="light">Light</button>
-            <button data-theme="dark">Dark</button>
-            <button data-theme="lgbt">LGBT+</button>
+            <button class="light-theme-btn" data-theme="light">Light</button>
+            <button class="dark-theme-btn" data-theme="dark">Dark</button>
+            <button class="lgbt-theme-btn" data-theme="lgbt">LGBT+</button>
         </nav>
     </header>
 
@@ -61,8 +61,10 @@
             <label for="velocidade-media">Velocidade média (km/h)</label>
             <input name="velocidade-media" type="number" placeholder="100">
 
-            <button class="form__calcular">Calcular</button>
-            <button type="reset" class="form__limpar">Limpar</button>
+            <div class="form__buttons-group">
+                <button class="form__calcular">Calcular</button>
+                <button type="reset" class="form__limpar">Limpar</button>
+            </div>
         </form>
 
         <!-- Resultados -->
