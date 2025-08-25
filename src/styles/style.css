@@ -1,3 +1,4 @@
+/* Root de cores */
 :root{
     --preto: #000000;
     --branco: #ffffff;
@@ -10,11 +11,47 @@
     --rosa: #ff00bb;
 }
 
+
+/* Estilização geral (global) */
 *{
     margin: 0 px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+/* Cabeçalho */
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--vermelho);
+    width: 50%;
+    border-radius: 8px;
+}
+
+h1 {
+    font-weight: 600;
+    color: var(--branco);
+}
+
+p {
+    font-size: 16px;
+    color: var(--branco);
+}
+
+
+
+
 
 
 /* Responsividade - Celular */
