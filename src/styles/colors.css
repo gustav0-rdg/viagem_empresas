@@ -1,0 +1,69 @@
+html[data-theme="lgbt"]
+{
+    --page-bg: radial-gradient(circle at top left, #0F0F17, #1A1A2E, #000);
+
+    --header-bg: linear-gradient(90deg, #FF3CAC, #784BA0, #2B86C5);
+    --text-header: #FFF;
+
+    --infos-bg: rgba(255, 255, 255, 0.08);
+    --text-infos: #FFF;
+
+    --constrast-color: linear-gradient(#FF3B30, #FF9500, #FFCC00, #34C759, #007AFF, #AF52DE);
+
+    --calcular-btn-bg: linear-gradient(135deg, #FF00C8, #FF0080, #FF2E63);
+    --text-calcular-btn: #FFF;
+    --calcular-btn-glow: 0 0 12px #FF00C8, 0 0 24px #FF2E63;
+
+    --limpar-btn-bg: linear-gradient(135deg, #FF3CAC, #FF6B6B, #FF0000);
+    --text-limpar-btn: #FFF;
+    --limpar-btn-glow: 0 0 12px #FF3CAC, 0 0 24px #FF0000;
+
+    --default-text: #FFF;
+    --subtext: #FF9FF3;
+
+    --glitter: url("https://i.ibb.co/vDQ1y1Q/glitter.png");
+}
+
+html[data-theme="light"]
+{
+    --page-bg: #F6F7FA;
+
+    --header-bg: #3E95D8;
+    --text-header: #FFF;
+
+    --infos-bg: #F8F9FB;
+    --text-infos: #000;
+
+    --constrast-color: #3E95D8;
+
+    --calcular-btn-bg: #3E95D8;
+    --text-calcular-btn: #FFF;
+
+    --limpar-btn-bg: #E75442;
+    --text-limpar-btn: #FFF;
+
+    --default-text: #000;
+    --subtext: #D9D9D9;
+}
+
+html[data-theme="dark"]
+{
+    --page-bg: #1A1C1E;
+
+    --header-bg: #4FA3E8;
+    --text-header: #FFF;
+
+    --infos-bg: #24262A;
+    --text-infos: #FFF;
+
+    --constrast-color: #4FA3E8;
+
+    --calcular-btn-bg: #4FA3E8;
+    --text-calcular-btn: #FFF;
+
+    --limpar-btn-bg: #FF6B5A;
+    --text-limpar-btn: #FFF;
+
+    --default-text: #FFF;
+    --subtext: #A6A6A6;
+}
