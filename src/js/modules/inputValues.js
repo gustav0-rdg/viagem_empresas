@@ -4,6 +4,7 @@
 import CalculadoraCustosViagem from "../calcCustos.js";
 import { routes } from '../routesData.js';
 import inserirNaTela from '../modules/insertingValues.js'
+import { updateUi } from "./addCards.js";
 const form = document.querySelector('.form__container');
 const calculadora = new CalculadoraCustosViagem();
 
@@ -26,7 +27,7 @@ form.addEventListener('submit', (e) => {
     formData.forEach((value, key) => {
         data[key] = value;
     });
-    
+    console.log(data);
     data.consumo = parseFloat(data.consumo);
     data.precoGas = parseFloat(data.precoGas);
     
@@ -38,7 +39,7 @@ form.addEventListener('submit', (e) => {
     const rotaSelecionada = routes.find(rota =>
         rota.origem === data.origem && rota.destino === data.destino
     );
-    console.log(rotaSelecionada);
+    updateUi(rotaSelecionada);
     if (!rotaSelecionada) {
         console.error("Rota não encontrada!");
         return;
