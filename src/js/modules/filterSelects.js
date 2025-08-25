@@ -1,3 +1,5 @@
+// Criado por gustavo
+
 import { routes } from "../routesData.js";
 
 const valoresAdicionados = new Set();
