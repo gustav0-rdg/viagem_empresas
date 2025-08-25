@@ -161,6 +161,11 @@ span {
     font-weight: 600;
 }
 
+.footer__container {
+    margin-top: 20px;
+}
+
+
 
 /* Responsividade - Celular */
 @media screen and (max-width: 480px){
