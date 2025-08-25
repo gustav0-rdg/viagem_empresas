@@ -13,6 +13,7 @@ const pedagios = document.getElementById('pedagios').value;
 const alimentacao = document.getElementById('alimentacao').value;
 const hospedagem = document.getElementById('hospedagem').value;
 const outrosCustos = document.getElementById('outros').value;
+const custoTotal = document.getElementById('total').value;
 
 // retorna os valores obtidos do html
 return{
@@ -23,6 +24,8 @@ return{
     pedagios,
     alimentacao,
     hospedagem,
-    outrosCustos
+    outrosCustos,
+    custoTotal
+
 }
 }
