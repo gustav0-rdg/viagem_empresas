@@ -51,10 +51,10 @@ p {
     color: var(--branco);
 }
 
-
 /* Conteudo principal */
 .main__container {
     width: 50%;
+    height: 100%;
     margin-top: 20px;
     border-radius: 8px;
     background-color: var(--branco);
@@ -73,7 +73,7 @@ h2 {
 hr{
     height: 2px;
     width: 100%;
-    background-color: var(--laranja);
+    background-color: var(--laranja );
     border: none;
     margin-top: 0;
 }
@@ -85,12 +85,41 @@ hr{
         display: flex;
         width: 100%;
         height: 100%;
-
-        
     }
+
+    .main__container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .form__container{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    hr{
+        margin-bottom: 10px;
+    }
+
 }
 
 /* Responsividade - Tablet */
 @media screen and (max-width: 768px){
-
+    
 }
