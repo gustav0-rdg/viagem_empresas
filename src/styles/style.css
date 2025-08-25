@@ -2,6 +2,7 @@
 :root{
     --preto: #000000;
     --branco: #ffffff;
+    --cinza: #e4e4e4;
     --vermelho: #ff0505;
     --laranja: #ff8c00;
     --amarelo: #ffdd00;
@@ -25,6 +26,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
+    background-color: var(--cinza);
 }
 
 
@@ -50,8 +52,31 @@ p {
 }
 
 
+/* Conteudo principal */
+.main__container {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: var(--branco);
+}
 
+.form__container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
 
+h2 {
+    margin-bottom: 0;
+}
+
+hr{
+    height: 2px;
+    width: 100%;
+    background-color: var(--laranja);
+    border: none;
+    margin-top: 0;
+}
 
 
 /* Responsividade - Celular */
