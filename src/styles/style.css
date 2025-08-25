@@ -8,6 +8,7 @@
     --amarelo: #ffdd00;
     --verde: #3fdf42;
     --azul: #0077ff; 
+    --azul-claro: #a8d1ff44;
     --roxo: #9000ff;
     --rosa: #ff00bb;
 }
@@ -132,6 +133,30 @@ input {
     color: var(--branco);
     font-weight: 600;
     font-size: 16px;
+}
+
+.resultados__container {
+    padding: 20px;
+}
+
+.resultados__elementos {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.resultados__caixa {
+    height: 120px;
+    width: 190px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--cinza);
+    display: flex;
+    justify-content: center;   
+}
+
+span {
+    font-weight: 600;
 }
 
 
