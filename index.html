@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./src/styles/style.css">
 
     <title>Planejador de viagem</title>
+    <script type="module" src="./src/js/core.js" defer></script>
 </head>
 
 <body>
@@ -15,10 +16,10 @@
         <h1>Planejador de Viagens</h1>
         <p>Calcule todos os custos e detalhes da sua próxima viagem</p>
 
-        <nav>
-            <button data-theme="lgbt"></button>
-            <button data-theme="lgbt"></button>
-            <button data-theme="lgbt"></button>
+        <nav class="header__themes-list">
+            <button class="light-theme-btn" data-theme="light">Light</button>
+            <button class="dark-theme-btn" data-theme="dark">Dark</button>
+            <button class="lgbt-theme-btn" data-theme="lgbt">LGBT+</button>
         </nav>
     </header>
 
@@ -60,8 +61,10 @@
             <label for="velocidade-media">Velocidade média (km/h)</label>
             <input name="velocidade-media" type="number" placeholder="100">
 
-            <button class="form__calcular">Calcular</button>
-            <button type="reset" class="form__limpar">Limpar</button>
+            <div class="form__buttons-group">
+                <button class="form__calcular">Calcular</button>
+                <button type="reset" class="form__limpar">Limpar</button>
+            </div>
         </form>
 
         <!-- Resultados -->
