@@ -1,10 +1,12 @@
 // Criado por gustavo
-
+import { updateUi } from "./addCards.js";
 import { routes } from "../routesData.js";
 
 const valoresAdicionados = new Set();
 
 const rotasSelect = document.querySelector('.rotas__origem');
+
+
 
 /**
  * @requires - Objeto com as rotas
@@ -21,7 +23,6 @@ routes.forEach(rota =>{
     }
     
 })
-
 
 const destinos = document.querySelector('.rotas__destino');
 rotasSelect.addEventListener('change', (e)=>{

@@ -26,7 +26,7 @@ form.addEventListener('submit', (e) => {
     formData.forEach((value, key) => {
         data[key] = value;
     });
-    console.log(data);
+    
     data.consumo = parseFloat(data.consumo);
     data.precoGas = parseFloat(data.precoGas);
     
@@ -38,7 +38,7 @@ form.addEventListener('submit', (e) => {
     const rotaSelecionada = routes.find(rota =>
         rota.origem === data.origem && rota.destino === data.destino
     );
-
+    console.log(rotaSelecionada);
     if (!rotaSelecionada) {
         console.error("Rota não encontrada!");
         return;
