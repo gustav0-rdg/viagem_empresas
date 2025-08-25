@@ -1,3 +1,5 @@
+/* Feito por Alicia */
+
 /* Root de cores */
 :root{
     --preto: #000000;
@@ -165,7 +167,7 @@ span {
     margin-top: 20px;
 }
 
-
+/* Feito por vitor */
 
 /* Responsividade - Celular */
 @media screen and (max-width: 480px){
